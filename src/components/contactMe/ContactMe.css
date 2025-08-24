@@ -1,0 +1,28 @@
+.fourth .section-heading {
+  font-size: 2rem;
+}
+
+.fourth .bg {
+  display: flex;
+  flex-direction: column;
+}
+
+.fourth .contactme-methods {
+  display: flex;
+  flex-direction: column;
+}
+
+.fourth .contactme-methods div {
+  display: flex;
+}
+
+.fourth .contactme-methods div img {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .fourth .section-heading {
+    font-size: 1.4rem;
+  }
+}

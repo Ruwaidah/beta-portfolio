@@ -1,0 +1,270 @@
+.third .bg {
+  display: flex;
+}
+.third .projects-container {
+  width: 90%;
+  height: 90%;
+}
+
+.third .projects-container .section-heading {
+  display: none;
+}
+
+.third .wrapper .expander {
+  width: 100px;
+  height: 70%;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-top: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.third .wrapper .expand-project {
+  flex-direction: column;
+}
+.expand-project .project-header .project-title {
+  display: none;
+}
+.expand-project .project-header {
+  display: flex;
+  width: 98%;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.third .expand-project .expander-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expander .expander-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expander .cardFlip,
+.flipReverse-btn-div {
+  display: none;
+}
+
+.expander .flipCard {
+  border: none;
+  background-color: none;
+}
+.expand-project .flipReverse-btn-div img {
+  display: flex;
+  z-index: 20;
+  width: 30px;
+  rotate: 90deg;
+}
+
+.expander .expander-container .project-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.expander .project-title p {
+  rotate: -90deg;
+  font-size: 1.6rem;
+}
+
+.expand-project .expander-container .project-title p {
+  rotate: 0deg;
+  display: none;
+}
+
+.expander .project-header #closeBtn {
+  display: none;
+}
+
+.expand-project #closeBtn {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  /* background: rgba(255, 255, 255, 0.6); */
+  border-radius: 20px;
+  height: 30px;
+  width: 36px;
+  cursor: pointer;
+  /* box-shadow: 1px 1px 4px #333; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: black;
+  z-index: 50 !important;
+}
+
+.expand-project .flipReverse-btn-div {
+  display: none;
+}
+
+.projects-container h2 {
+  text-align: center;
+  width: 100%;
+  font-family: Kanit, sans-serif;
+  font-weight: 400;
+  /* color: #af2a2a; */
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 1500px) {
+  .third .wrapper .expander {
+    width: 60px;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .third .projects-container {
+    margin-top: 20px;
+  }
+  .third .wrapper .expand-project {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .third .expander-container {
+    justify-content: center;
+    align-items: center;
+    width: 94%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .third .projects-container {
+    width: 99%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .third .wrapper {
+    flex-direction: column;
+  }
+
+  .third .wrapper .expander {
+    width: 90%;
+    height: 40px;
+  }
+
+  .expander .project-title p {
+    rotate: 0deg;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .third .projects-container h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .third .wrapper .expander {
+    width: 98%;
+    margin: 4px 0 4px 0;
+  }
+  .third .wrapper .expand-project {
+    width: 98%;
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .third .wrapper .expand-project .frontCard,
+  .third .wrapper .expand-project .backCard {
+    position: absolute;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+  }
+
+  .third .wrapper .expand-project .backCard {
+    z-index: 90;
+  }
+  .project-header {
+    z-index: 10;
+  }
+
+  .third .wrapper .expand-project .projectCard {
+    height: 75%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .third .wrapper .expand-project .Connect .project-details {
+    padding-top: 20px;
+  }
+
+  .third .wrapper .expand-project .MovieKnight .project-details {
+    padding: 0;
+  }
+
+  .third .wrapper .expand-project .project-details h2 {
+    text-align: start;
+  }
+
+  .expand-project .cardFlip {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  .expand-project .backCard {
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .third .expand-project .projectCard .imgs-div {
+    display: none;
+  }
+  .expand-project .flipReverse-btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    z-index: 20;
+  }
+
+  .third .expand-project .flipReverse-btn-div {
+    z-index: 90;
+  }
+
+  .third .expand-project .frontCard {
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+  }
+  .expander .expander-container {
+    align-items: flex-start;
+  }
+  .expander-container ul {
+    margin-left: 10px;
+  }
+  .expander-container ul li {
+    font-size: 0.9rem;
+  }
+
+  .third .expand-project .backCard img {
+    width: 46%;
+    height: 80%;
+  }
+}

@@ -1,0 +1,97 @@
+.NavMenu {
+  width: 100%;
+  /* position: fixed; */
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+}
+
+.NavMenu .name-title {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavMenu .name-title p {
+  color: rgb(165, 44, 44);
+  font-weight: bold;
+}
+
+.NavMenu .nav-list {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.NavMenu .nav-list .active-tag {
+  background-color: rgba(248, 199, 97, 0.7);
+  color: black;
+}
+.NavMenu .nav-list a {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 6px;
+  transition: color 0.7s, background-color 1s;
+  width: 240px;
+  height: 40px;
+}
+
+.NavMenu .nav-list a:hover {
+  /* background-color: rgb(165, 44, 44); */
+  background-color: rgba(248, 199, 97, 0.7);
+  color: black;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1500px) {
+  .NavMenu .nav-list {
+    width: 80%;
+    margin: 0;
+  }
+  .NavMenu .nav-list a {
+    font-size: 1rem;
+  }
+
+  #about,
+  #home {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .NavMenu .nav-list {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .NavMenu .nav-list a:first-child {
+    width: 140px;
+  }
+  .NavMenu .nav-list a {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+    .NavMenu .nav-list  #contact {
+    margin-right: 4px;
+  }
+
+  .NavMenu .nav-list a {
+    font-size: 0.6rem;
+    height: 30px;
+    width: 180px;
+    margin: 0 2px;
+  }
+}

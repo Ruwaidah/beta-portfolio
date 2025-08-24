@@ -1,0 +1,158 @@
+.expander .projectCard {
+  display: none;
+}
+
+
+.expand-project .expander-container .projectCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 80%;
+  width: 98%;
+}
+
+.expand-project .expander-container .MovieKnight {
+  height: 98%;
+  align-items: center;
+}
+
+.expand-project .expander-container .Connect {
+  height: 94%;
+  align-items: center;
+}
+
+.projectCard .imgs-div {
+  display: flex;
+  justify-content: center;
+  width: 45%;
+}
+
+.projectCard .imgs-div img {
+  width: 240px;
+  height: 68%;
+  margin-left: 10px;
+}
+.projectCard .project-details {
+  width: 50%;
+}
+
+.projectCard .project-details h2 {
+  text-align: start;
+  font-family: "Amaranth", sans-serif;
+}
+
+.projectCard .project-details ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  font-size: 1.4rem;
+  color: black;
+  padding: 0;
+}
+.projectCard .project-details ul li {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.projectCard .project-details ul li a {
+  color: rgb(248, 248, 248);
+  text-decoration: none;
+}
+
+/* .Boo .project-details ul li a {
+    color: rgb(58, 52, 52);
+
+} */
+
+@media screen and (max-width: 1500px) {
+  .projectCard .project-details ul {
+    font-size: 1rem;
+  }
+
+  .projectCard .imgs-div img {
+    width: 180px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .expand-project .expander-container .projectCard {
+    /* flex-direction: column; */
+    align-items: center;
+    height: 100%;
+    margin-top: 40px;
+  }
+  .projectCard .imgs-div {
+    height: 300px;
+  }
+
+  .projectCard .imgs-div img {
+    height: 100%;
+  }
+
+  .projectCard .project-details h2 {
+    margin: 0;
+  }
+
+  .projectCard .project-details ul {
+    display: flex;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+
+  .expand-project .expander-container .projectCard {
+margin-top:0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .projectCard .imgs-div {
+    width: 36%;
+  }
+
+  .projectCard .project-details {
+    width: 60%;
+  }
+  .projectCard .imgs-div .project-img-02 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .expand-project .expander-container .projectCard {
+    margin-top: 20px;
+    align-items: flex-start;
+  }
+
+  .expand-project .expander-container .projectCard h2 {
+    text-align: center;
+  }
+
+  .expand-project .expander-container .projectCard .imgs-div {
+    align-self: center;
+  }
+  .expand-project .expander-container .Boo {
+    align-items: center;
+  }
+  .expand-project .expander-container .MovieKnight h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .expand-project .expander-container .projectCard {
+    width: 99%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .projectCard .project-details {
+    width: 100%;
+    margin-left: 16px;
+  }
+
+}
