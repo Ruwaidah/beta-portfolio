@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import axios from "axios";
 import "./ContactForm.css";
 import { useForm } from "react-hook-form";
 
@@ -9,13 +10,19 @@ const ContactForm = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    console.log(import.meta.env.VITE_APP_URL);
+    axios
+      .post(`${import.meta.env.VITE_APP_URL}`, data)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => console.log(error.response.data.message));
   };
 
   const checkError = () => {
     if (Object.keys(errors).length > 0) setErrorsInput(errors);
     clearErrors();
   };
-console.log(errors)
   return (
     <div className="ContactForm">
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -26,8 +33,8 @@ console.log(errors)
           {" "}
           {errorsInput.name
             ? errorsInput.name.message
-            : errorsInput.email
-            ? errorsInput.email.message
+            : errorsInput.subject
+            ? errorsInput.subject.message
             : errorsInput.message
             ? errorsInput.message.message
             : null}
@@ -49,15 +56,18 @@ console.log(errors)
           })}
         />
         <input
-          className={errorsInput.email ? "error" : ""}
-          type="email"
-          placeholder="Email"
-          {...register("email", {
+          className={errorsInput.subject ? "error" : ""}
+          type="text"
+          placeholder="Subject"
+          {...register("subject", {
             required: true,
-            pattern: {
-              value:
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              message: "Invalid email",
+            maxLength: {
+              value: 50,
+              message: "Too long",
+            },
+            minLength: {
+              value: 2,
+              message: "Too short",
             },
           })}
         />
@@ -65,7 +75,7 @@ console.log(errors)
           className={
             errorsInput.message ? "error messageInput" : "messageInput"
           }
-          placeholder="Message"
+          placeholder="Type your message here ..."
           {...register("message", {
             required: true,
             maxLength: {

@@ -84,15 +84,23 @@ const Projects = () => {
         }, 200);
       });
     });
-    gsap.set(".expander", {
-      backgroundColor: gsap.utils.wrap(["#f5ce5b", "#c570b6", "#78d6e0"]),
-    });
+    // gsap.set(".expander", {
+    //   backgroundColor: gsap.utils.wrap(["#f5ce5b", "#c570b6", "#78d6e0"]),
+    // });
+
+    // gsap.set(".expander", {
+    //   backgroundColor: gsap.utils.wrap([
+    //     "rgba(248, 199, 97, 0.7)",
+    //     "rgba(217, 156, 72, 0.7)",
+    //     "rgba(181, 132, 99, 0.7)",
+    //   ]),
+    // });
 
     gsap.set(".expander", {
       backgroundColor: gsap.utils.wrap([
-        "rgba(248, 199, 97, 0.7)",
-        "rgba(217, 156, 72, 0.7)",
-        "rgba(181, 132, 99, 0.7)",
+        "rgba(182, 182, 182, 0.7)",
+        "rgba(109, 109, 109, 0.7)",
+        "rgba(70, 70, 70, 0.7)",
       ]),
     });
   }, []);
