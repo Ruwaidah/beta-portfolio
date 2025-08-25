@@ -7,46 +7,48 @@ const Boo = () => {
   };
 
   return (
-    <div className="Boo projectCard" >
+    <div className="Boo projectCard">
       <div className="imgs-div">
-        <img className="project-img-01" src="./assets/Boo.png" />
-        <img className="project-img-02" src="./assets/boo01.png" />
+        <img className="project-img-01" src="./assets/cat01.jpg" />
+        <img className="project-img-02" src="./assets/cat02.jpg" />
       </div>
       <div className="project-details">
-        <h2>Boo</h2>
+        <h2>Lorem Ipsum </h2>
         <ul>
           <li>
-            Search for and display pet listings based on pet characteristics,
-            location, and status.
+            is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the
+            1500s.
           </li>
           <li>
-            Search for and display animal welfare organizations based on
-            organization name, ID, and location. display profiles of local
-            organizations.
+            when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially
+            unchanged.
           </li>
           <li>
-            Help users find their perfect pets by location, breed, and other
-            characteristics.
+            It was popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages,
           </li>
           <li>
             {" "}
             Link to the Github:{" "}
-            <a href="https://github.com/Ruwaidah/boo" target="_blank">
+            <a href="" target="_blank">
               Front end
             </a>
           </li>
           <li>
             {" "}
             Link to the Github:{" "}
-            <a href="https://github.com/Ruwaidah/boo-server" target="_blank">
+            <a href="" target="_blank">
               Back end
             </a>
           </li>
           <li>
             {" "}
-            Link to the App:{" "}
-            <a href="https://boo-7emc.onrender.com/" target="_blank">
-              Boo
+            WebSite:{" "}
+            <a href="" target="_blank">
+              Lorem Ipsum
             </a>
           </li>
         </ul>

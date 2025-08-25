@@ -5,24 +5,74 @@
 .fourth .bg {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* padding-left: 40px; */
 }
 
 .fourth .contactme-methods {
   display: flex;
   flex-direction: column;
+  height: 70vh;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.fourth .contactme-methods div {
+.fourth .contactme-methods .email-linkedin-github {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 10vh;
 }
 
-.fourth .contactme-methods div img {
-  width: 40px;
-  height: 40px;
+.fourth .contactme-methods .email-linkedin-github .email-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-left: 40px;
 }
 
-@media screen and (max-width: 500px) {
-  .fourth .section-heading {
-    font-size: 1.4rem;
+.fourth .contactme-methods .email-linkedin-github .github-linkedin {
+  display: flex;
+  justify-content: center;
+}
+.fourth .contactme-methods .email-linkedin-github img {
+  width: 36px;
+  height: 36px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .fourth .contactme-methods .email-linkedin-github {
+    margin-top: 30px;
+  }
+  .fourth .contactme-methods .email-linkedin-github p {
+    font-size: 1rem;
+  }
+
+  .fourth .contactme-methods .email-linkedin-github img {
+    width: 26px;
+    height: 26px;
+    margin: 0 6px 0 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .fourth .contactme-methods .email-linkedin-github {
+    flex-direction: column;
+  }
+  .fourth .contactme-methods .email-linkedin-github .email-div {
+    margin-left: 10px;
+  }
+
+  .fourth .contactme-methods .email-linkedin-github .email-div p {
+    margin: 0;
+  }
+
+  .fourth .contactme-methods .email-linkedin-github img {
+    width: 24px;
+    height: 24px;
   }
 }

@@ -7,8 +7,6 @@ const ContactForm = () => {
   const { register, handleSubmit, formState, watch, clearErrors } = useForm();
   const { errors } = formState;
 
-
-
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -17,21 +15,23 @@ const ContactForm = () => {
     if (Object.keys(errors).length > 0) setErrorsInput(errors);
     clearErrors();
   };
-  console.log(errors);
-  console.log(errorsInput);
+console.log(errors)
   return (
     <div className="ContactForm">
-      <p>
-        {" "}
-        {errorsInput.name
-          ? errorsInput.name.message
-          : errorsInput.email
-          ? errorsInput.email.message
-          : errorsInput.message
-          ? errorsInput.message.message
-          : null}
-      </p>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="name-title">
+          <h2 className="section-heading">Contact Me</h2>
+        </div>
+        <p>
+          {" "}
+          {errorsInput.name
+            ? errorsInput.name.message
+            : errorsInput.email
+            ? errorsInput.email.message
+            : errorsInput.message
+            ? errorsInput.message.message
+            : null}
+        </p>
         <input
           className={errorsInput.name ? "error" : ""}
           type="text"
@@ -61,9 +61,10 @@ const ContactForm = () => {
             },
           })}
         />
-        <input
-          className={errorsInput.message ? "error" : ""}
-          type="text"
+        <textarea
+          className={
+            errorsInput.message ? "error messageInput" : "messageInput"
+          }
           placeholder="Message"
           {...register("message", {
             required: true,

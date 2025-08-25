@@ -55,7 +55,7 @@ const Projects = () => {
       } else if (window.screen.width <= 700 && window.screen.width >= 500) {
         animation.to(expander, { height: 500, duration: 0.4 });
       } else {
-        animation.to(expander, { height: 500, duration: 0.4 });
+        animation.to(expander, { height: 480, duration: 0.4 });
       }
 
       animation.to(
@@ -118,8 +118,8 @@ const Projects = () => {
                     <Boo />
                   </div>
                   <div className="backCard cardFlip">
-                    <img src="./assets/Boo.png" />
-                    <img src="./assets/boo01.png" />
+                    <img src="./assets/cat02.jpg" />
+                    <img src="./assets/cat03.jpg" />
                   </div>
                   <div className="flipReverse-btn-div">
                     <div id="flip-btn" className="flipCard">
@@ -140,8 +140,8 @@ const Projects = () => {
                     <Connect />
                   </div>{" "}
                   <div className="backCard cardFlip">
-                    <img src="./assets/connect01.png" />
-                    <img src="./assets/connect02.png" />
+                    <img src="./assets/cat01.jpg" />
+                    <img src="./assets/cat02.jpg" />
                   </div>
                   <div className="flipReverse-btn-div">
                     <div id="flip-btn" className="flipCard">
@@ -162,8 +162,8 @@ const Projects = () => {
                     <MovieKnight />
                   </div>
                   <div className="backCard cardFlip">
-                    <img src="./assets/movieKnight.png" />
-                    <img src="./assets/movieknight01.png" />
+                    <img src="./assets/cat03.jpg" />
+                    <img src="./assets/cat01.jpg" />
                   </div>
                   <div className="flipReverse-btn-div">
                     <div id="flip-btn" className="flipCard">

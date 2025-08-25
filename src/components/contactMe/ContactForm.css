@@ -1,3 +1,75 @@
-.ContactForm .error {
-  border: red 1px solid;
+.contactme-methods .ContactForm .error {
+  border: red 2px solid;
+}
+
+.ContactForm {
+  display: flex;
+  /* width: 100%; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 40%;
+  /* height: 100vh; */
+}
+
+.ContactForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.ContactForm form input,
+.ContactForm form .messageInput {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.ContactForm form input[type="submit"] {
+  padding: 0;
+  background-color: rgb(240, 183, 113);
+}
+
+.ContactForm form .messageInput {
+  padding-top: 10px;
+  height: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+  .ContactForm {
+    width: 60%;
+  }
+  .ContactForm .name-title h2 {
+    font-size: 1.4rem;
+    padding-left: 4px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ContactForm {
+    width: 80%;
+  }
+
+  .ContactForm .name-title h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ContactForm {
+    width: 96%;
+  }
+
+  .ContactForm form input {
+    height: 40px;
+    font-size: 0.8rem;
+  }
 }

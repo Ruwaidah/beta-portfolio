@@ -2,7 +2,6 @@
   display: none;
 }
 
-
 .expand-project .expander-container .projectCard {
   display: flex;
   justify-content: space-between;
@@ -29,7 +28,7 @@
 
 .projectCard .imgs-div img {
   width: 240px;
-  height: 68%;
+  height: 360px;
   margin-left: 10px;
 }
 .projectCard .project-details {
@@ -101,11 +100,9 @@
   }
 }
 
-
 @media screen and (max-width: 900px) {
-
   .expand-project .expander-container .projectCard {
-margin-top:0;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 800px) {
@@ -149,10 +146,10 @@ margin-top:0;
 }
 
 @media screen and (max-width: 500px) {
-
   .projectCard .project-details {
     width: 100%;
     margin-left: 16px;
   }
+
 
 }

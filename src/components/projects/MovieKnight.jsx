@@ -1,39 +1,36 @@
 import "./ProjectCard.css";
 
-
 const MovieKnight = () => {
   return (
     <div className="MovieKnight projectCard">
       <div className="imgs-div">
-        <img className="project-img-01" src="./assets/movieKnight.png" />
-        <img className="project-img-02" src="./assets/movieknight01.png" />
+        <img className="project-img-01" src="./assets/cat02.jpg" />
+        <img className="project-img-02" src="./assets/cat03.jpg" />
         {/* <img src={movieKnight02} /> */}
       </div>
       <div className="project-details">
+        <h2>Lorem Ipsum</h2>
+
         <ul>
-          <h2>MovieKnight</h2>
           <li>
-            Front end built using React and the Back end built using Node.js and
-            Express.{" "}
+            is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the
+            1500s.
           </li>
           <li>
-            Displays movies showing in theaters within the zip code you've
-            search for.
+            when an unknown printer took a galley of type and scrambled it to
+            make a type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining essentially
+            unchanged.
           </li>
           <li>
-            Provides more detailed information about each movie if required.
-          </li>
-          <li>
-            Allows users to select their preferences for a movie going
-            experience.
-          </li>
-          <li>
-            Filters available movies that match those preferences for the user.
+            It was popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages,
           </li>
           <li>
             Link to the Github:
             <a
-              href="https://github.com/Ruwaidah/movie_knight_be"
+              href=""
               target="_blank"
             >
               {" "}
@@ -44,7 +41,7 @@ const MovieKnight = () => {
             {" "}
             Link to the Github:{" "}
             <a
-              href="https://github.com/Ruwaidah/movie-knight-fe"
+              href=""
               target="_blank"
             >
               {" "}
@@ -54,10 +51,10 @@ const MovieKnight = () => {
 
           <li>
             {" "}
-            Link to the App:{" "}
-            <a href="https://movieknight.onrender.com/" target="_blank">
+            Website:{" "}
+            <a href="" target="_blank">
               {" "}
-              MoviKnight{" "}
+              Lorem Ipsum{" "}
             </a>
           </li>
         </ul>
