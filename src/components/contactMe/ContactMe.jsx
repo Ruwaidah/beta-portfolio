@@ -21,7 +21,7 @@ const ContactMe = () => {
             <div className="contactme-methods">
               <ContactForm />
               <div className="email-linkedin-github">
-                <div className="github-linkedin">
+                {/* <div className="github-linkedin">
                   <a href="https://github.com/Ruwaidah" target="_blank">
                     <img
                       width="96"
@@ -41,7 +41,7 @@ const ContactMe = () => {
                     href="https://app.enhancv.com/share/50b87f57/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic"
                     target="_blank"
                   ></a>
-                </div>{" "}
+                </div>{" "} */}
                 <div className="email-div">
                   <img
                     className="gmail-logo"
