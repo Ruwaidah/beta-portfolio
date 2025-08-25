@@ -46,40 +46,8 @@ section {
   background-position: center;
 }
 
-.first .bg {
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.1) 100%
-    ),
-    url("./assets/bg015.jpg");
-}
-
-.second .bg {
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.1) 100%
-    ),
-    url("./assets/bg012.jpg");
-}
-
-.third .bg {
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.1) 100%
-    ),
-    url("./assets/bg011.jpg");
-}
-
-.fourth .bg {
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.1) 100%
-    ),
-    url("./assets/bg014.jpg");
+.App .bg {
+  background-color: black;
 }
 
 h2 * {
