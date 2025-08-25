@@ -13,12 +13,10 @@ const ContactForm = () => {
     axios
       .post(`${import.meta.env.VITE_APP_URL}`, data)
       .then((response) => {
-        console.log(response)
         setResponse(response.data.message);
       })
       .catch((error) => 
         {
-          console.log(error)
           setResponse(error.response.data.message)});
   };
 

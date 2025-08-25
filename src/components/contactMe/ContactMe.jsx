@@ -2,13 +2,6 @@ import ContactForm from "./ContactForm";
 import "./ContactMe.css";
 
 const ContactMe = () => {
-  console.log(import.meta.env.VITE_APP_URL);
-  const sendMessage = async (data, thunkAPI) => {
-    return await axios
-      .post(`${import.meta.env.VITE_APP_URL}`, data)
-      .then((response) => response.data)
-      .catch((error) => thunkAPI.rejectWithValue(error.response.data.message));
-  };
 
   return (
     <section className="fourth" id="fourth04">
