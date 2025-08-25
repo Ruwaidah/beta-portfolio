@@ -5,18 +5,21 @@ import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
   const [errorsInput, setErrorsInput] = useState({});
+  const [response, setResponse] = useState(null);
   const { register, handleSubmit, formState, watch, clearErrors } = useForm();
   const { errors } = formState;
 
   const onSubmit = (data) => {
-    console.log(data);
-    console.log(import.meta.env.VITE_APP_URL);
     axios
       .post(`${import.meta.env.VITE_APP_URL}`, data)
       .then((response) => {
-        console.log(response);
+        console.log(response)
+        setResponse(response.data.message);
       })
-      .catch((error) => console.log(error.response.data.message));
+      .catch((error) => 
+        {
+          console.log(error)
+          setResponse(error.response.data.message)});
   };
 
   const checkError = () => {
@@ -25,71 +28,75 @@ const ContactForm = () => {
   };
   return (
     <div className="ContactForm">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="name-title">
-          <h2 className="section-heading">Contact Me</h2>
-        </div>
-        <p>
-          {" "}
-          {errorsInput.name
-            ? errorsInput.name.message
-            : errorsInput.subject
-            ? errorsInput.subject.message
-            : errorsInput.message
-            ? errorsInput.message.message
-            : null}
-        </p>
-        <input
-          className={errorsInput.name ? "error" : ""}
-          type="text"
-          placeholder="Name"
-          {...register("name", {
-            required: true,
-            maxLength: {
-              value: 50,
-              message: "Name is too long",
-            },
-            minLength: {
-              value: 2,
-              message: "Name is too short",
-            },
-          })}
-        />
-        <input
-          className={errorsInput.subject ? "error" : ""}
-          type="text"
-          placeholder="Subject"
-          {...register("subject", {
-            required: true,
-            maxLength: {
-              value: 50,
-              message: "Too long",
-            },
-            minLength: {
-              value: 2,
-              message: "Too short",
-            },
-          })}
-        />
-        <textarea
-          className={
-            errorsInput.message ? "error messageInput" : "messageInput"
-          }
-          placeholder="Type your message here ..."
-          {...register("message", {
-            required: true,
-            maxLength: {
-              value: 250,
-              message: "Message is too long",
-            },
-            minLength: {
-              value: 10,
-              message: "Message is too short",
-            },
-          })}
-        />
-        <input value="Send" type="submit" onClick={checkError} />
-      </form>
+      {response ? (
+        <p className="respond-send-message">{response}</p>
+      ) : (
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="name-title">
+            <h2 className="section-heading">Contact Me</h2>
+          </div>
+          <p>
+            {" "}
+            {errorsInput.name
+              ? errorsInput.name.message
+              : errorsInput.subject
+              ? errorsInput.subject.message
+              : errorsInput.message
+              ? errorsInput.message.message
+              : null}
+          </p>
+          <input
+            className={errorsInput.name ? "error" : ""}
+            type="text"
+            placeholder="Name"
+            {...register("name", {
+              required: true,
+              maxLength: {
+                value: 50,
+                message: "Name is too long",
+              },
+              minLength: {
+                value: 2,
+                message: "Name is too short",
+              },
+            })}
+          />
+          <input
+            className={errorsInput.subject ? "error" : ""}
+            type="text"
+            placeholder="Subject"
+            {...register("subject", {
+              required: true,
+              maxLength: {
+                value: 50,
+                message: "Too long",
+              },
+              minLength: {
+                value: 2,
+                message: "Too short",
+              },
+            })}
+          />
+          <textarea
+            className={
+              errorsInput.message ? "error messageInput" : "messageInput"
+            }
+            placeholder="Type your message here ..."
+            {...register("message", {
+              required: true,
+              maxLength: {
+                value: 250,
+                message: "Message is too long",
+              },
+              minLength: {
+                value: 10,
+                message: "Message is too short",
+              },
+            })}
+          />
+          <input value="Send" type="submit" onClick={checkError} />
+        </form>
+      )}
     </div>
   );
 };

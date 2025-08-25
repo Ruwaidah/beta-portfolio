@@ -12,6 +12,11 @@
   /* height: 100vh; */
 }
 
+.respond-send-message {
+  color: rgb(47, 122, 47);
+  font-size: 1.2rem;
+}
+
 .ContactForm form {
   display: flex;
   flex-direction: column;
@@ -19,6 +24,8 @@
   justify-content: center;
   width: 100%;
 }
+
+
 
 .ContactForm form input,
 .ContactForm form .messageInput {
